@@ -129,10 +129,10 @@ void sortItems() {
     cout << "Enter your choice: ";
     cin >> orderChoice;
     
-    bool ascending = (orderChoice != 2); // Default to ascending if input is invalid
+    bool ascending = (orderChoice != 2); 
     
     switch (sortChoice) {
-        case 1: // Sort by quantity
+        case 1: 
             if (ascending) {
                 sort(inventory.begin(), inventory.end(), [](const Item& a, const Item& b) {
                     return a.quantity < b.quantity;
@@ -146,7 +146,7 @@ void sortItems() {
             }
             break;
             
-        case 2: // Sort by price
+        case 2: 
             if (ascending) {
                 sort(inventory.begin(), inventory.end(), [](const Item& a, const Item& b) {
                     return a.price < b.price;
@@ -160,7 +160,7 @@ void sortItems() {
             }
             break;
             
-        default: // Sort by name (default)
+        default: 
             if (ascending) {
                 sort(inventory.begin(), inventory.end(), [](const Item& a, const Item& b) {
                     return a.name < b.name;
